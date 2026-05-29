@@ -2,6 +2,8 @@
 <html lang="pt-BR">
 <head>
 <link rel="stylesheet" href="css/app.css">
+<style>html.auth-pending body{visibility:hidden}</style>
+<script type="module" src="js/auth-guard.js"></script>
 
 <meta name="apple-mobile-web-app-capable" content="yes">
 
@@ -968,28 +970,6 @@ document
 
 }
 
-/* LOGOUT */
-
-function sair(){
-
-let confirmar =
-confirm(
-"Deseja realmente sair?"
-);
-
-if(confirmar){
-
-localStorage.removeItem(
-"logado"
-);
-
-window.location.href =
-"index.html";
-
-}
-
-}
-
 /* ESTATISTICAS */
 
 let provas =
@@ -1168,6 +1148,7 @@ sidebar.classList
 });
 
 </script>
+<script type="module" src="js/auth-logout.js"></script>
 <script src="js/app.js"></script>
 </body>
 
